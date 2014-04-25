@@ -1,0 +1,353 @@
+//----------imports-----------------//
+@import "bits.scss";
+@import "compass/css3";
+//----------clearfix-----------------//
+/*----------clearfix----------------*/ 
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+ 
+  .clearfix:after {
+    clear: both; }
+/*----------custom font------------*/
+@include font-face ('refrigerator', font-files('/fonts/customfont/refrigerator.ttf'));
+
+/*-----------container-fluid------------*/
+.main {
+	// height: 100%;
+	background: url("/images/bg/bg.jpg");
+}
+/*-----------navbar---------------------*/
+#navigation {
+	background-color: rgba(31, 31, 31, 0.85);
+	height: 70px;
+	width: 100%;
+	border: none;//get rid of default bootstrap setting
+}
+.navbar-collapse {
+	margin-top: 20px;
+} 
+.navbar-toggle {
+	margin-top: 18px; 
+	border-color: rgba(152, 170, 169, 1.0) !important;
+}
+.icon-bar{
+	background-color: rgba(152, 170, 169, 1.0) !important;
+}	
+.brand {
+	width: 100%;
+	height: 100%;
+	margin: 3px 0;
+	float: left;
+	ol {
+		list-style: none;
+	}
+	li {
+		float: left;
+		color: rgba(255, 255, 255, 1.0);
+		em {
+			font-style: normal;
+			font-size: 13px;
+		}
+	}
+	li:nth-child(1) {
+		margin-top: -10px;
+	}
+	li:nth-child(2) {
+		margin-top: 30px;
+		margin-left: -55px;
+	}
+}
+#nav-content ul{
+	margin-top: -8px;
+	li{
+		position: relative;
+		text-align: center;
+		padding: 0 20px;
+		a {
+			color: rgba(152, 170, 169, 1.0);
+			&:hover {
+			color: white;
+			}
+		}
+	}
+}
+/*navbar active class*/
+.act {
+	padding-bottom: 3px;
+	color: white;
+	border-bottom: 5px solid green;
+}
+/*navbar active class*/
+
+/*---------[----section-1----------------*/
+#section-1-wrapper {
+	position: relative;
+}
+.video-wrapper {
+  position: relative;
+  padding-left: 0; //ensure video is full screen
+  padding-right: 0; //ensure video is full screen
+}
+.video-overlay { /*put an overlay on video to prevent video controls on right click*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 830px;
+  width: 100%
+}
+/*inner-content*/
+.inner-content {
+	position: relative;
+	 max-height: 600px;
+	}
+.content {
+	position:absolute;
+		top: 30%;
+ 		left:15%;//positions inner content on screen
+}
+.content-top {
+	width: 100%;
+  color: rgba(255, 255, 255, 1.0);
+  text-align: left;
+  max-width: 450px;
+  float: left;
+  img {
+  	margin-top: 5px;
+  }
+  h1 {
+  	background-color: $contentgray;
+  	padding: 20px;
+  }
+}
+
+.content-top span {	
+	position: relative; // to be able to position <span>Xbox One</span>
+	top: 6px;
+}
+aside a:hover {
+	text-decoration: none;
+}
+.xbox-reveal .reveal-content a span.play-button {
+	position: relative; // to position play button 
+	font-size: 25px;
+	background-color: $grn;
+	color: $xwhite;
+	padding: 8px 0 0 8px;
+	height: 40px;
+	width: 40px;
+	float: left;
+	display: inline-block;
+	}
+.xbox-reveal .reveal-content a span.space {
+	width: 4px;
+	height: 40px;
+	background: none;
+	float: left;
+	display: inline-block;
+}
+.xbox-reveal .reveal-content a h4 {
+	float: left;
+	display: inline-block;
+	color: $xwhite;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	height: 40px;
+	margin-top: 6px;
+	letter-spacing: 2px;
+	background-color: $contentgray;
+}
+/*modal*/
+.modal-tittle {
+	color: black;
+}
+/*---------------section-2-----------------*/
+/*col-left*/
+.section-2 {
+	position: relative;
+	background-color: $sectionwhite;
+	margin-top: -5px;
+}
+.image-wrapper {
+	position: relative;
+	margin-left: -170px;
+	margin-top: 200px;
+}
+/*col-right*/
+.sec-2-col-right .content-wrapper {
+	margin-top: 150px;
+	width: 80%;
+}
+.sec-2-col-right .content-wrapper h1 {
+	font-family: 'refrigerator';
+	font-size: 46px;
+	letter-spacing: 2px;
+	span {
+		font-size: 34px;
+	}
+}
+.sec-2-col-right .content-wrapper h4 {
+		font-size: 28px;
+		font-family: 'refrigerator';
+	}
+.sec-2-col-right .content-wrapper .content-body {
+	margin-top: 50px;
+	line-height: 27px; /*for readability*/
+}
+/*button*/
+.button-wrapper .button-left {
+	width: 200px;
+	height: 50px;
+	display: block; /* to enable width an height*/ 
+	text-align: center;
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 30px;
+	text-decoration: none;
+	color: $xwhite;
+	//background-image: linear-gradient(to bottom, $gradientlightgrn, $grn 75%); //have to include browser prefix
+	background: $grn;
+	background: rgba($grn, 0.9);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	@include transition (background 0.7s ease);
+	&:hover {
+		@include transition (background 0.7s ease);
+		background: $grn;
+		background: rgba($grn, 1);
+	}
+}
+.button-wrapper .button-right  {
+	width: 200px;
+	height: 50px;
+	display: block; /* to enable width an height*/ 
+	text-align: center;
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 30px;
+	text-decoration: none;
+	color: $xwhite;
+	//background-image: linear-gradient(to bottom, rgba($contentgray, 0.61), rgba($contentgray, 0.9) 75%); //have to include browser prefix
+	background: $contentgray;
+	background: rgba($contentgray, 0.9);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	@include transition (background 0.7s ease);
+	&:hover {
+		@include transition (background 0.5s ease);
+		//background-image: linear-gradient(to bottom, rgba($contentgray, 0.8), rgba($contentgray, 1) 75%);
+		background: $contentgray;
+		background: rgba($contentgray, 1);
+	}
+}
+.button-wrapper .space {
+	margin-top: 30px;
+	width: 20px;
+	height: 50px;
+	background: none;
+	float: left;
+}
+
+
+
+/*--------------media quieries--------------*/
+
+// /* Small devices (tablets, 768px and up) */
+ @media (max-width: 767px) { 
+	.act {
+		color: black;
+	}
+	.navbar-collapse {
+		background-color: rgba(255, 255, 255, 0.9);
+		border: 1px solid black !important;	
+	}
+	#nav-content ul li {
+		text-align: right;
+		a:hover {
+			color: black;
+		}
+	}
+	.content-top h1 {
+		font-size: 25px;
+	}
+	.content-top img {
+		width: 15%;
+		margin-top: 10px;
+	}
+.xbox-reveal .reveal-content {
+		 width: 80%;
+}
+.xbox-reveal .reveal-content a span.play-button {
+	height: 30px;
+	width: 30px;
+	font-size: 15px;
+	
+}
+.xbox-reveal .reveal-content a span.space {
+	height: 30px;
+}
+.xbox-reveal .reveal-content a h4 {
+	font-size: 12px;
+	height: 30px;
+}
+}
+
+
+// /* Medium devices (desktops, 992px and up) */
+ @media (max-width: 992px) and (min-width: 768px) {
+	.content-top  h1 {
+		font-size: 25px;
+	}
+		.content-top img {
+			width: 10%;
+		}
+}
+
+// /* Large devices (large desktops, 1200px and up) */
+// @media (min-width: 1200px) { ... }
+
+
+/* 700px*/
+@media (max-width: 700px) {
+.content {
+	top: 20%;
+	left: 20%;
+	}
+.content-top h1 {
+		font-size: 15px;
+	}
+	.content-top img {
+		width: 12%;
+		margin-top: 10px;
+	}
+.xbox-reveal .reveal-content {
+		 width: 100%;
+}
+.xbox-reveal .reveal-content a span.play-button {
+	height: 25px;
+	width: 25px;
+	font-size: 10px;
+	
+}
+.xbox-reveal .reveal-content a span.space {
+	height: 25px;
+}
+.xbox-reveal .reveal-content a h4 {
+	font-size: 8px;
+	height: 25px;
+	letter-spacing: 2px;
+}
+}
+/* to adjust navbar at 857px*/
+@media (max-width: 857px) {
+	#nav-content ul li {
+		padding: 0 15px;
+	}
+}
+/* to adjust navbar at 842px*/
+@media (max-width: 842px) {
+	#nav-content ul li {
+		padding: 0 10px;
+	}
+}

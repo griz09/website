@@ -1,0 +1,387 @@
+/*----------clearfix----------------*/
+/* line 6, ../sass/styles.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 10, ../sass/styles.scss */
+.clearfix:after {
+  clear: both; }
+
+/*----------custom font------------*/
+@font-face {
+  font-family: "refrigerator";
+  src: url(/fonts/customfont/refrigerator.ttf) format('truetype'); }
+/*-----------container-fluid------------*/
+/* line 16, ../sass/styles.scss */
+.main {
+  background: url("/images/bg/bg.jpg"); }
+
+/*-----------navbar---------------------*/
+/* line 21, ../sass/styles.scss */
+#navigation {
+  background-color: rgba(31, 31, 31, 0.85);
+  height: 70px;
+  width: 100%;
+  border: none; }
+
+/* line 27, ../sass/styles.scss */
+.navbar-collapse {
+  margin-top: 20px; }
+
+/* line 30, ../sass/styles.scss */
+.navbar-toggle {
+  margin-top: 18px;
+  border-color: #98aaa9 !important; }
+
+/* line 34, ../sass/styles.scss */
+.icon-bar {
+  background-color: #98aaa9 !important; }
+
+/* line 37, ../sass/styles.scss */
+.brand {
+  width: 100%;
+  height: 100%;
+  margin: 3px 0;
+  float: left; }
+  /* line 42, ../sass/styles.scss */
+  .brand ol {
+    list-style: none; }
+  /* line 45, ../sass/styles.scss */
+  .brand li {
+    float: left;
+    color: white; }
+    /* line 48, ../sass/styles.scss */
+    .brand li em {
+      font-style: normal;
+      font-size: 13px; }
+  /* line 53, ../sass/styles.scss */
+  .brand li:nth-child(1) {
+    margin-top: -10px; }
+  /* line 56, ../sass/styles.scss */
+  .brand li:nth-child(2) {
+    margin-top: 30px;
+    margin-left: -55px; }
+
+/* line 61, ../sass/styles.scss */
+#nav-content ul {
+  margin-top: -8px; }
+  /* line 63, ../sass/styles.scss */
+  #nav-content ul li {
+    position: relative;
+    text-align: center;
+    padding: 0 20px; }
+    /* line 67, ../sass/styles.scss */
+    #nav-content ul li a {
+      color: #98aaa9; }
+      /* line 69, ../sass/styles.scss */
+      #nav-content ul li a:hover {
+        color: white; }
+
+/*navbar active class*/
+/* line 76, ../sass/styles.scss */
+.act {
+  padding-bottom: 3px;
+  color: white;
+  border-bottom: 5px solid green; }
+
+/*navbar active class*/
+/*---------[----section-1----------------*/
+/* line 84, ../sass/styles.scss */
+#section-1-wrapper {
+  position: relative; }
+
+/* line 87, ../sass/styles.scss */
+.video-wrapper {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0; }
+
+/* line 92, ../sass/styles.scss */
+.video-overlay {
+  /*put an overlay on video to prevent video controls on right click*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 830px;
+  width: 100%; }
+
+/*inner-content*/
+/* line 100, ../sass/styles.scss */
+.inner-content {
+  position: relative;
+  max-height: 600px; }
+
+/* line 104, ../sass/styles.scss */
+.content {
+  position: absolute;
+  top: 30%;
+  left: 15%; }
+
+/* line 109, ../sass/styles.scss */
+.content-top {
+  width: 100%;
+  color: white;
+  text-align: left;
+  max-width: 450px;
+  float: left; }
+  /* line 115, ../sass/styles.scss */
+  .content-top img {
+    margin-top: 5px; }
+  /* line 118, ../sass/styles.scss */
+  .content-top h1 {
+    background-color: rgba(31, 31, 31, 0.8);
+    padding: 20px; }
+
+/* line 124, ../sass/styles.scss */
+.content-top span {
+  position: relative;
+  top: 6px; }
+
+/* line 128, ../sass/styles.scss */
+aside a:hover {
+  text-decoration: none; }
+
+/* line 131, ../sass/styles.scss */
+.xbox-reveal .reveal-content a span.play-button {
+  position: relative;
+  font-size: 25px;
+  background-color: #107c10;
+  color: white;
+  padding: 8px 0 0 8px;
+  height: 40px;
+  width: 40px;
+  float: left;
+  display: inline-block; }
+
+/* line 142, ../sass/styles.scss */
+.xbox-reveal .reveal-content a span.space {
+  width: 4px;
+  height: 40px;
+  background: none;
+  float: left;
+  display: inline-block; }
+
+/* line 149, ../sass/styles.scss */
+.xbox-reveal .reveal-content a h4 {
+  float: left;
+  display: inline-block;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  height: 40px;
+  margin-top: 6px;
+  letter-spacing: 2px;
+  background-color: rgba(31, 31, 31, 0.8); }
+
+/*modal*/
+/* line 162, ../sass/styles.scss */
+.modal-tittle {
+  color: black; }
+
+/*---------------section-2-----------------*/
+/*col-left*/
+/* line 167, ../sass/styles.scss */
+.section-2 {
+  position: relative;
+  background-color: #f2f2f2;
+  margin-top: -5px; }
+
+/* line 172, ../sass/styles.scss */
+.image-wrapper {
+  position: relative;
+  margin-left: -170px;
+  margin-top: 200px; }
+
+/*col-right*/
+/* line 178, ../sass/styles.scss */
+.sec-2-col-right .content-wrapper {
+  margin-top: 150px;
+  width: 80%; }
+
+/* line 182, ../sass/styles.scss */
+.sec-2-col-right .content-wrapper h1 {
+  font-family: 'refrigerator';
+  font-size: 46px;
+  letter-spacing: 2px; }
+  /* line 186, ../sass/styles.scss */
+  .sec-2-col-right .content-wrapper h1 span {
+    font-size: 34px; }
+
+/* line 190, ../sass/styles.scss */
+.sec-2-col-right .content-wrapper h4 {
+  font-size: 28px;
+  font-family: 'refrigerator'; }
+
+/* line 194, ../sass/styles.scss */
+.sec-2-col-right .content-wrapper .content-body {
+  margin-top: 50px;
+  line-height: 27px;
+  /*for readability*/ }
+
+/*button*/
+/* line 199, ../sass/styles.scss */
+.button-wrapper .button-left {
+  width: 200px;
+  height: 50px;
+  display: block;
+  /* to enable width an height*/
+  text-align: center;
+  float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  text-decoration: none;
+  color: white;
+  background: #107c10;
+  background: rgba(16, 124, 16, 0.9);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-transition: background 0.7s ease;
+  -o-transition: background 0.7s ease;
+  -webkit-transition: background 0.7s ease;
+  transition: background 0.7s ease; }
+  /* line 215, ../sass/styles.scss */
+  .button-wrapper .button-left:hover {
+    -moz-transition: background 0.7s ease;
+    -o-transition: background 0.7s ease;
+    -webkit-transition: background 0.7s ease;
+    transition: background 0.7s ease;
+    background: #107c10;
+    background: #107c10; }
+
+/* line 221, ../sass/styles.scss */
+.button-wrapper .button-right {
+  width: 200px;
+  height: 50px;
+  display: block;
+  /* to enable width an height*/
+  text-align: center;
+  float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  text-decoration: none;
+  color: white;
+  background: rgba(31, 31, 31, 0.8);
+  background: rgba(31, 31, 31, 0.9);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-transition: background 0.7s ease;
+  -o-transition: background 0.7s ease;
+  -webkit-transition: background 0.7s ease;
+  transition: background 0.7s ease; }
+  /* line 237, ../sass/styles.scss */
+  .button-wrapper .button-right:hover {
+    -moz-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+    background: rgba(31, 31, 31, 0.8);
+    background: #1f1f1f; }
+
+/* line 244, ../sass/styles.scss */
+.button-wrapper .space {
+  margin-top: 30px;
+  width: 20px;
+  height: 50px;
+  background: none;
+  float: left; }
+
+/*--------------media quieries--------------*/
+@media (max-width: 767px) {
+  /* line 258, ../sass/styles.scss */
+  .act {
+    color: black; }
+
+  /* line 261, ../sass/styles.scss */
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid black !important; }
+
+  /* line 265, ../sass/styles.scss */
+  #nav-content ul li {
+    text-align: right; }
+    /* line 267, ../sass/styles.scss */
+    #nav-content ul li a:hover {
+      color: black; }
+
+  /* line 271, ../sass/styles.scss */
+  .content-top h1 {
+    font-size: 25px; }
+
+  /* line 274, ../sass/styles.scss */
+  .content-top img {
+    width: 15%;
+    margin-top: 10px; }
+
+  /* line 278, ../sass/styles.scss */
+  .xbox-reveal .reveal-content {
+    width: 80%; }
+
+  /* line 281, ../sass/styles.scss */
+  .xbox-reveal .reveal-content a span.play-button {
+    height: 30px;
+    width: 30px;
+    font-size: 15px; }
+
+  /* line 287, ../sass/styles.scss */
+  .xbox-reveal .reveal-content a span.space {
+    height: 30px; }
+
+  /* line 290, ../sass/styles.scss */
+  .xbox-reveal .reveal-content a h4 {
+    font-size: 12px;
+    height: 30px; } }
+@media (max-width: 992px) and (min-width: 768px) {
+  /* line 299, ../sass/styles.scss */
+  .content-top h1 {
+    font-size: 25px; }
+
+  /* line 302, ../sass/styles.scss */
+  .content-top img {
+    width: 10%; } }
+/* 700px*/
+@media (max-width: 700px) {
+  /* line 313, ../sass/styles.scss */
+  .content {
+    top: 20%;
+    left: 20%; }
+
+  /* line 317, ../sass/styles.scss */
+  .content-top h1 {
+    font-size: 15px; }
+
+  /* line 320, ../sass/styles.scss */
+  .content-top img {
+    width: 12%;
+    margin-top: 10px; }
+
+  /* line 324, ../sass/styles.scss */
+  .xbox-reveal .reveal-content {
+    width: 100%; }
+
+  /* line 327, ../sass/styles.scss */
+  .xbox-reveal .reveal-content a span.play-button {
+    height: 25px;
+    width: 25px;
+    font-size: 10px; }
+
+  /* line 333, ../sass/styles.scss */
+  .xbox-reveal .reveal-content a span.space {
+    height: 25px; }
+
+  /* line 336, ../sass/styles.scss */
+  .xbox-reveal .reveal-content a h4 {
+    font-size: 8px;
+    height: 25px;
+    letter-spacing: 2px; } }
+/* to adjust navbar at 857px*/
+@media (max-width: 857px) {
+  /* line 344, ../sass/styles.scss */
+  #nav-content ul li {
+    padding: 0 15px; } }
+/* to adjust navbar at 842px*/
+@media (max-width: 842px) {
+  /* line 350, ../sass/styles.scss */
+  #nav-content ul li {
+    padding: 0 10px; } }

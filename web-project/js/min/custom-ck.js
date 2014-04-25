@@ -1,0 +1,1 @@
+$(".nav li a span").click(function(){$("span").removeClass("act"),$(this).addClass("act")}),$(".close").click(function(){$("video")[1].pause()});
