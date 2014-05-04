@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+    width: 940px;
+    margin: auto;
+}
+
+/*.grid {
+  width: 100%;
+  margin: 0 auto;
+}*/
+
+.all-stuff > div { 
+    position: absolute; 
+    left:0; 
+    top:40px;
+    display: none;
+}
+
+.yo ul li {
+  list-style: none;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
