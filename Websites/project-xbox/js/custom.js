@@ -1,8 +1,15 @@
 //----------add active to navbar------------
-$('.nav li a span').click(function(){
-$('span').removeClass('act');
-$(this).addClass('act');
-});
+// $('.nav li a span').click(function(){
+// $('span').removeClass('act');
+// $(this).addClass('act');
+// });
+
+$("#nav-content a").filter(function(){
+    return this.href == location.href.replace(/#.*/, "");
+}).addClass("act");
+
+
+
 //------------------------------------------
 //-------------stop video when close modal---------
 $('.close').click(function() {

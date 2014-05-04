@@ -43,7 +43,6 @@ h1,h2,h3,h4,h5,h6 {
 
 /*-----------NAVBAR---------------------*/
 #navigation {
-	position: relative;
 	background-color: rgba(31, 31, 31, 0.85);
 	height: 70px;
 	border: none;//get rid of default bootstrap setting
@@ -52,7 +51,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .navbar-collapse {
 	margin-top: 20px;
-	@include breakpoint (tablet) {background-color: rgba(black,0.9); margin-top: 1.5px; border: none; padding-top: 30px}
+	@include breakpoint (tablet) {background-color: rgba(31, 31, 31, 0.85); margin-top: 1px; border: none; padding-top: 30px; width: 95px; float: right;}
 } 
 .navbar-toggle {
 	margin-top: 16px; 
@@ -78,10 +77,15 @@ h1,h2,h3,h4,h5,h6 {
 	li{
 		position: relative;
 		text-align: center;
-		padding: 0 20px;
-		@include breakpoint (cousin-bear) {padding: 9px; }
+		padding: 0 35px; // was 20px before act class change via url
+		@include breakpoint (cousin-bear) {padding: 9px 24px; } //was padding: 9px before act class chage via url
+		@include breakpoint (tablet) {padding: 0;  text-align: center;}
 		a {
+			height: 43px;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
 			color: rgba(152, 170, 169, 1.0);
+				@include breakpoint (tablet) {margin-left: -45px; height: 40px;} //edition after act class change via url.
 			&:hover {
 			color: white;
 			}
@@ -90,9 +94,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 /*navbar active class*/
 .act {
-	padding-bottom: 3px;
-	color: white;
+	span {
+		color: white;
+	}
 	border-bottom: 5px solid green;
+		@include breakpoint (tablet) {border-bottom: 3px solid green;}
 }
 /* end navbar active class*/
 
@@ -118,7 +124,7 @@ h1,h2,h3,h4,h5,h6 {
 	top: 25%;
 	left: 15%;
 	max-height: 600px;
-	@include breakpoint (mobile) {top: 10%;}
+	@include breakpoint (mobile) {top: 23%;}
 		.content {
 			float: left;
 			max-width: 500px;
@@ -633,5 +639,7 @@ footer {
 		}
 }
 /* END FOOTER */
+
+/*************************START-GAMES-PAGE**********************************/
 
 
