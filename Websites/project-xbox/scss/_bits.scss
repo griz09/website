@@ -1,0 +1,47 @@
+$pad: 15px;
+$sectionwhite: rgba(242, 242, 242, 1.0);
+$grn: rgba(16, 124, 16, 1.0);
+$contentgray: rgba(31, 31, 31, 0.8);
+$headfont: 3em;
+$text: #636468;
+
+
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == brother-bear {
+    @media (max-width: 1200px) { @content; }
+  }
+    @else if $point == brother-bear-min {
+    @media (max-width: 1200px) and (min-width: 767px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 1350px) { @content; }
+  }
+   @else if $point == mama-bear-min {
+    @media (max-width: 1350px) and (min-width: 992px) { @content; }
+  }
+  @else if $point == cousin-bear {
+    @media (max-width: 992px)  { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 650px)  { @content; }
+  }
+  @else if $point == sister-bear {
+  	@media (max-width: 1035px) {@content; }
+  }
+  @else if $point == tablet-min {
+  	@media (max-width: 768px) and (min-width: 400px) {@content; }
+  }
+   @else if $point == tablet {
+  	@media (max-width: 768px) {@content; }
+  }
+  @else if $point == mobile {
+  	@media (max-width: 400px) {@content; }
+  }
+  @else if $point == mobile-sm {
+    @media (max-width: 390px) {@content; }
+  }
+}

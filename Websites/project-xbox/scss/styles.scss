@@ -1,0 +1,637 @@
+html,body {
+	overflow-x: hidden;
+}
+@import "compass/css3";
+@import 'bits.scss';
+@font-face {
+  font-family: "myfont";
+  src: url(../fonts/customfont/refrigerator.ttf) format('truetype'); }
+@font-face {
+  font-family: "segoe";
+  src: url(../fonts/customfont/segoe.ttf) format('truetype'); }
+// GLOBAL CLASSES //
+[class*='grid-'] {
+	float: left;
+	padding: $pad 0 $pad $pad;
+} 
+.grid {
+	width: 85%;
+	margin: 0 auto;
+}
+.grid960 {
+	width: 960px;
+	margin: 0 auto;
+}
+.grid-1-2 {
+	width: 50%;
+	padding-right: $pad;
+}
+.grid-1-3 {
+	width: 100/3*1%;
+}
+.grid-2-3 {
+	width: 100/3*2%;
+}
+.textGrid {
+	width: 80%;
+	margin: auto;
+}
+//--------------//
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'segoe';
+}
+
+/*-----------NAVBAR---------------------*/
+#navigation {
+	position: relative;
+	background-color: rgba(31, 31, 31, 0.85);
+	height: 70px;
+	border: none;//get rid of default bootstrap setting
+	margin-bottom: 0 !important;
+	@include breakpoint (cousin-bear) {height: 60px;}
+}
+.navbar-collapse {
+	margin-top: 20px;
+	@include breakpoint (tablet) {background-color: rgba(black,0.9); margin-top: 1.5px; border: none; padding-top: 30px}
+} 
+.navbar-toggle {
+	margin-top: 16px; 
+	border-color: rgba(152, 170, 169, 1.0) !important;
+}
+.icon-bar{
+	background-color: rgba(152, 170, 169, 1.0) !important;
+}	
+.navbar-brand {
+	position: relative;
+	margin-top: -15px;
+	@include breakpoint (cousin-bear) {margin-top: -16px;}
+	@include breakpoint (tablet) {margin-top: -3px;}
+}
+.brand img {
+	@include breakpoint (cousin-bear) {width: 33px; height: 33px;}
+	@include breakpoint (tablet) {width: 40px; height: 40px;}
+}
+#nav-content ul{
+	margin-top: -8px;
+	padding-left: 30px;
+	@include breakpoint (cousin-bear) {margin-left: 2px; font-size: 12px; margin-top: -20px;}
+	li{
+		position: relative;
+		text-align: center;
+		padding: 0 20px;
+		@include breakpoint (cousin-bear) {padding: 9px; }
+		a {
+			color: rgba(152, 170, 169, 1.0);
+			&:hover {
+			color: white;
+			}
+		}
+	}
+}
+/*navbar active class*/
+.act {
+	padding-bottom: 3px;
+	color: white;
+	border-bottom: 5px solid green;
+}
+/* end navbar active class*/
+
+/* END NAVBAR */
+
+/* SECTION-1 */
+.section-1 {
+	position: relative;
+	width: 100%;
+}
+.video-wrapper {
+	width: 100%;
+}
+.video-overlay { /*put an overlay on video to prevent video controls on right click*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.inner-content {
+	position: absolute;
+	top: 25%;
+	left: 15%;
+	max-height: 600px;
+	@include breakpoint (mobile) {top: 10%;}
+		.content {
+			float: left;
+			max-width: 500px;
+			padding: 0 15px;
+			@include breakpoint (tablet) {width: 330px;}
+			@include breakpoint (mobile) {width: 270px;}
+			img {
+  			margin-top: 5px;
+  			@include breakpoint (tablet) {margin-top: 6px; width: auto; height: 30px;}
+  			@include breakpoint (baby-bear) {height: 28px; margin-top: 7px;}
+  			@include breakpoint (mobile) {height: 25px;}
+		  }
+		  h1 {
+		  	color: white;
+		  	background-color: $contentgray;
+		  	padding: 20px;
+		  	@include breakpoint (tablet) {font-size: 26px;}
+		  	@include breakpoint (baby-bear) {font-size: 23px;}
+		  	@include breakpoint (mobile) {font-size: 20px;}
+		  }
+		  span {
+		  	position: relative;
+		  	top: 6px;
+		  }
+		}
+		.xbox-reveal .reveal-content a span.play-button {
+				position: relative; // to position play button 
+				font-size: 25px;
+				background-color: green;
+				color: white;
+				padding: 8px 0 0 8px;
+				height: 40px;
+				width: 40px;
+				float: left;
+				display: inline-block;
+				@include breakpoint (tablet) {font-size: 20px; padding: 9px;}
+				@include breakpoint (baby-bear) {font-size: 17px; padding: 7px; width: 30px; height: 30px;}
+				@include breakpoint (mobile) {font-size: 14px; padding: 5px; width: 25px; height: 25px; margin-top: -10px; }
+			}
+			.xbox-reveal .reveal-content a span.space {
+				width: 4px;
+				height: 40px;
+				background: none;
+				float: left;
+				display: inline-block;
+				@include breakpoint (baby-bear) {height: 30px; width: 3.5px;}
+				@include breakpoint (mobile) {height: 25px; width: 3px;}
+			}
+				.xbox-reveal .reveal-content a h4 {
+					float: left;
+					display: inline-block;
+					color: white;
+					padding-left: 20px;
+					padding-right: 20px;
+					padding-top: 10px;
+					height: 40px;
+					margin-top: 6px;
+					letter-spacing: 2px;
+					background-color: $contentgray;
+					@include breakpoint (tablet) {font-size: 14px; width: 255px; text-align: center; padding: 13px 0;}
+					@include breakpoint (baby-bear) {font-size: 11px; width: 220px; height: 30px; padding: 9px 0;}
+					@include breakpoint (mobile) {font-size: 10px; width: 212px; height: 25px; margin-top: -4px; padding: 7px 0;}
+				}
+}
+/*modal*/
+.modal-tittle {
+	color: black;
+	text-align: center;
+}
+/* END SECTION-1 */
+
+/* START SECTION-2 */
+.section-2 {
+	position: relative;
+	background-color: $sectionwhite;
+	top: -5px;
+}
+.module-wrap {
+	padding: 60px 0;
+	@include breakpoint(cousin-bear) {width: 85%;}
+}
+.module-left {
+	position: relative;
+	margin: 0 auto;
+	@include breakpoint(tablet) {width: 100%;}
+	@include breakpoint(mobile) {width: 100%;}
+	 img {
+	 	margin-top: 90px;
+	 	width: auto;
+	 	height: 456px; /* orignal height */
+	 	position: relative;
+	 	margin-left: -210px;
+	 	@include breakpoint(papa-bear) {margin-left: -280px;}
+	 	@include breakpoint(mama-bear) {height: 380px; margin-top: 100px; margin-left: -120px;} /* breakpoint for specific 1350px */
+	 	@include breakpoint(brother-bear) {height: 360px; margin-left: -80px}
+	 	@include breakpoint(sister-bear) {height: 320px; margin-left: -30px; margin-top: 70px} /* breakpoint for specific 1035px */
+	 	@include breakpoint(cousin-bear) {margin-left: -60px; width: 100%; height: auto;}
+	 	@include breakpoint(tablet) {height: auto; width: 100%; margin-left: 0;} /* breakpoint for specific 768px */
+	 }
+	}
+.module-right {
+	@include breakpoint(tablet) {width: 100%;}
+	@include breakpoint(mobile) {width: 100%;} /* breakpoint for specific 545px */
+	.text-wrapper {
+		width: 100%;
+		@include breakpoint(cousin-bear) {}
+		//@include breakpoint(sister-bear) {width: 100%;}
+	}
+		h1 {
+			font-family: 'myfont';
+			font-size: 50px;
+			letter-spacing: 2px;
+			@include breakpoint(cousin-bear) {font-size: 2.4em} /* breakpoint for specific 1035px */
+			@include breakpoint(tablet) {font-size: 32px;}
+			@include breakpoint (mobile-sm) {font-size: 30px;}
+
+		}
+		h4 {
+			font-family: 'myfont';
+			font-size: 36px;
+			@include breakpoint(cousin-bear) {font-size: 1.4em}
+		}
+		.content-body  {
+			margin-top: 35px;
+			line-height: 28px;
+			font-size: 18px;
+			color: $text;
+			@include breakpoint(mama-bear) {font-size: 16px;}
+			@include breakpoint(cousin-bear) {font-size: 1em}
+			p {
+				&:last-child {
+					@include breakpoint(sister-bear) {display: none;}
+				}
+			}
+		}
+			.button-wrapper a {
+				display: block;
+				width: 200px;
+				height: 50px;
+				text-align: center;
+				text-decoration: none;
+				padding: $pad;
+				color: white;
+				float: left;
+				@include breakpoint(baby-bear) {width: 100%;}
+				 &:first-child {
+				 	background: $grn;
+				 	background: rgba($grn, 0.9);
+	        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	        @include breakpoint(brother-bear-min) {width: 130px; font-size: 0.9em;}
+	        //transition when add compass
+				 }
+				 &:last-child {
+				 	background: $contentgray;
+				 	background: rgba($contentgray, 0.9);
+	        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	        @include breakpoint(brother-bear-min) {width: 130px; font-size: 0.9em;}
+				 }
+			}
+			.button-wrapper .space {
+				width: 20px;
+				height: 50px;
+				float: left;
+				@include breakpoint(mama-bear) {width: 10px;}
+				@include breakpoint(tablet) {height: 10px;}
+
+				
+			}
+			.button-wrapper {
+				margin-top: 40px;
+			}
+}
+/* END SECTION-2 */		
+
+/* START SECTION-3 */
+.section-3 {
+	background-color: $grn;
+	position: relative;
+	top: -5px;
+.module-wrapper {
+	padding: 100px 0 100px 0;
+	@include breakpoint(mobile) {padding-bottom: 60px;}
+}
+	.module {
+		@include column-count (4);
+		@include column-gap (0px);
+		line-height: 0; /* stop vertical space */
+		@include breakpoint(cousin-bear) {@include column-count (3);}
+			.image-wrap img {
+				width: 100%;
+			}
+	}
+		.inner-wrap {
+			position: absolute;
+			top: 160px;
+			left: 15%;
+			@include breakpoint (baby-bear) {top: 140px;}
+			@include breakpoint (mobile) {top: 100+$pad;}
+				.inner {
+					max-width: 350px;
+					background-color: $contentgray;
+					padding: $pad*0.1 0 $pad $pad*2.5;
+					@include breakpoint (brother-bear) {width: 300px;}
+					@include breakpoint (baby-bear) {width: 270px;}
+					@include breakpoint (mobile) {width: 200px; padding: 5px 13px 13px 13px;}
+						h1 {
+							max-width: 350px;
+							color: white;
+							margin-top: $pad;
+							@include breakpoint (brother-bear) {font-size: 30px; margin-top: 10px;}
+							@include breakpoint (baby-bear) {font-size: 26px; margin-top: 10px;}
+							@include breakpoint (mobile) {font-size: 22px;}
+
+						}
+						p {
+							color: white;
+							@include breakpoint (baby-bear) {font-size: 12px;}
+							@include breakpoint (mobile) {font-size: 10px;}
+						}
+							.button {
+								position: relative;
+								margin-top: 25px;
+								@include breakpoint (brother-bear) {margin-top: $pad;}
+								
+								a {
+									position: relative;
+									margin-top: 10px;
+									width: 150px;
+									height: 30px;
+									display: block;
+									background-color: $grn;
+									text-decoration: none;
+									text-align: center;
+									padding: 6px;
+									color: white;
+									@include breakpoint (baby-bear) {font-size: 12px; width: 130px; height: 30px; padding: 8px;}
+									@include breakpoint (mobile) {font-size: 11px; width: 120px;}
+								}
+							}	
+				}
+		}
+}
+
+
+
+
+
+/* class to fill last column from 992px down */
+.gone {
+	display: none;
+	@include breakpoint(cousin-bear) {display: block;}
+}
+/* END SECTION-3 */
+
+/* START SECTION-4 */
+.section-4 {
+	position: relative;
+	background-color: white;
+	top: -5px;
+	.module-wrapper {
+		padding: 100px 0;
+		@include breakpoint(cousin-bear) {width: 85%;}
+		.module-left {
+			@include breakpoint(tablet) {width: 100%;}
+			@include breakpoint(mobile) {width: 100%;}
+			.content-left-wrap{
+					.text-wrap {
+						h1 {
+							font-family: 'myfont';
+							font-size: 50px;
+							letter-spacing: 2px;
+							@include breakpoint(cousin-bear) {font-size: 2.4em;}
+							@include breakpoint(tablet) {font-size: 32px;}
+							@include breakpoint (mobile-sm) {font-size: 30px;}
+						}
+						p {
+							margin-top: 35px;
+							font-size: 18px;
+							color: $text;
+							line-height: 28px;
+							@include breakpoint(mama-bear) {font-size: 16px;}
+							@include breakpoint(cousin-bear) {font-size: 1em;}
+						}
+					}
+					.button {
+						position: relative;
+						margin-top: 25px;
+						width: 200px;
+						height: 50px;
+						background-color: $grn;
+						@include breakpoint(baby-bear) {width: 100%;}
+							a {
+								position: absolute;
+								display: block;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								text-decoration: none;
+								padding: 15px 0;
+								color: white;
+							}
+					}
+				}
+			}
+			.module-right {
+				@include breakpoint(tablet) {width: 100%;}
+				@include breakpoint(mobile) {widows: 100%;}
+					.content-right-wrap {
+						.image-wrap {
+							img {
+								width: auto;
+								margin-left: 80px;
+								@include breakpoint(mama-bear) {height: 250px; margin-left: 50px;}
+								@include breakpoint(brother-bear) {height: 235px; margin-left: 35px;}
+								@include breakpoint(sister-bear) {height: 190px; margin-left: 30px; margin-top: 45px;} 
+								@include breakpoint(cousin-bear) {height: auto; width: 100%; margin-top: 40px;}
+								@include breakpoint(tablet) {margin-left: 0;}
+							}
+						}
+					}
+				}
+	}
+}
+/* END SECTION-4 */
+
+/* START SECTION-5 */
+.section-5 {
+	position: relative;
+	background-color: $sectionwhite;
+	top: -5px;
+	.module-wrapper {
+		padding: 100px 0;
+		@include breakpoint(cousin-bear) {width: 85%;}
+		.module-left {
+			@include breakpoint(tablet) {width: 100%;}
+			@include breakpoint(mobile) {width: 100%;}
+			.video-wrapper {
+				iframe {
+					margin-left: -150px;
+					@include breakpoint(papa-bear) {height: 394px; width: 600px; margin-left: -250px;}
+					@include breakpoint(mama-bear) {height: 365px; width: 100%; margin-left: -90px}
+					@include breakpoint(brother-bear) {height: 337px; width: 100%; margin-left: -45px;}
+					@include breakpoint(sister-bear) {height: 292px; width: 100%; margin-left: -23px;}
+					@include breakpoint(tablet) {height: 330px; width: 100%;	margin-left: 0;}
+					@include breakpoint(mobile) {height: 200px; width: 100%;} 
+				}
+			}
+		}
+		.module-right {
+			@include breakpoint(tablet) {width: 100%;}
+			@include breakpoint(mobile) {width: 100%;}
+			.text-wrapper {
+				h1 {
+					font-size: 50px;
+					letter-spacing: 2px;
+					@include breakpoint(cousin-bear) {font-size: 2.4em;}
+					@include breakpoint(tablet) {font-size: 32px;}
+					@include breakpoint (mobile-sm) {font-size: 30px;}
+
+				}
+				p {
+					font-size: 18px;
+					color: $text;
+					margin-top: 25px;
+					@include breakpoint(mama-bear) {font-size: 16px;}
+					@include breakpoint(cousin-bear) {font-size: 1em;}
+				}
+			}
+			.button {
+				position: relative;
+				margin-top: 30px;
+				width: 200px;
+				height: 50px;
+				background-color: $grn;
+				text-align: center;
+				cursor: pointer;
+				color: white;
+				letter-spacing: 1px;
+				padding: 15px 0;
+				@include breakpoint(baby-bear) {width: 100%;}
+			}
+		}
+	}
+}
+/* END SECTION-5 */
+
+/* START SECTION-6 CONNECT-SECTION */
+.section-6 {
+	position: relative;
+	background-color: black;
+	top: -5px;
+	.module-wrapper {
+		padding: 100px 0;
+		@include breakpoint(cousin-bear) {width: 85%;}
+		.module-left {
+			@include breakpoint (sister-bear) {width: 100%;}
+			.text-wrapper {
+				h1 {
+					font-size: 24px;
+					color: white;
+					@include breakpoint (mobile-sm) {font-size: 22px;}
+					span {
+					}
+					em {
+						font-style: normal;
+						color: rgba(178, 178, 178, 1.0);
+					}
+				}
+				p {
+					color: rgba(103, 103, 103, 1.0);
+					@include breakpoint(cousin-bear) {font-size: 1em;}
+				}
+			}
+		}
+		.module-right {
+			margin: 0 auto; 
+			@include breakpoint (sister-bear) {width: 100%;}
+			.social-icon-wrapper {
+				margin-top: 20px;
+				padding-left: 75px;
+				@include breakpoint (sister-bear) {margin-left: -115px;}
+				.text-image {
+					position: relative;
+					float: left;
+ 						a {
+							display: table-cell;
+							vertical-align: middle;
+							text-align: center;
+							text-decoration: none;
+							width: 110px;
+							height: 86px;
+							color: rgba(103, 103, 103, 1.0);
+							padding: 0 10px 0 10px;
+								&:hover {
+									color: white;
+								}
+							.text-image-wrapper {
+								.image {
+									img {
+
+									}
+								}
+								.text {
+									padding-top: 10px; 
+									p {
+									}
+								}
+							}
+						}
+				}
+			}
+		}
+	}
+}
+/* END SECTION-6 CONNECT-SECTION */
+
+/* START FOOTER */
+footer {
+	position: relative;
+	background-color: rgba(51, 51, 51, 1.0);
+	top: -5px;
+		.footer-wrap {
+			padding: 30px 0 20px 0;
+			.upper-section {
+				.nav {
+					float: left;
+					padding: 0 10px 0 0;
+					a {
+						color: rgba(103, 103, 103, 1.0);
+						font-size: 12px;
+						text-decoration: none;
+					}
+				}
+				.social {
+					float: left;
+					padding: 0 0 0 10px;
+					iframe {
+						border: none;
+						max-height: 21px;
+						max-width: 80px;
+					}
+				}
+			}
+			.bottom-section {
+				margin-top: 10px;
+				border-top: 1px solid rgba(103, 103, 103, 1.0);
+				.nav {
+					padding-top: 5px;
+					float: left;
+					a {
+						padding-right: $pad;
+						color: rgba(103, 103, 103, 1.0);
+						font-size: 12px;
+						text-decoration: none;
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+				}
+				.copyright-wrapper {
+					padding-top: 7px;
+					float: right;
+					@include breakpoint (baby-bear) {float: left; width: 100%}
+					.copyright {
+						color: rgba(103, 103, 103, 1.0);
+						font-size: 11px;
+					}
+				}
+			}
+		}
+}
+/* END FOOTER */
+
+
